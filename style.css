@@ -1,0 +1,31 @@
+/*===.map{
+    height: 100%;
+    area|z0-[natural=coastline] {
+        fill-color: #ef9d19;
+    }
+    line|z1-[boundary=administrative][admin_level=2] {
+        width: 2;
+        opacity: 0.4;
+        color: rgb(47, 0, 255);}
+
+    node|z1-[place=country] {
+            text: name:es;
+            font-size: 14;
+            text-transform: uppercase; }
+}===*/
+
+
+.leaflet-tile-pane .leaflet-layer.leaflet-zoom-animated .leaflet-layer.leaflet-tile-container {
+        background-color: rgb(30, 30, 112); /* Cambia el color del mar a tu preferencia */
+      }
+
+      .leaflet-tile-pane .leaflet-layer.leaflet-zoom-animated .leaflet-layer.leaflet-tile-container img.leaflet-tile {
+        background-color: rgb(25, 221, 159); /* Cambia el color de la tierra a tu preferencia */
+      }
+      
+      var routeLayer = L.polyline(routeCoordinates).addTo(map);
+
+routeLayer.setStyle({
+  color: 'red', // Cambia el color de las rutas a tu preferencia
+  weight: 3, // Cambia el grosor de la línea a tu preferencia
+});
